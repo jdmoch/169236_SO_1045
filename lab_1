@@ -1,1 +1,14 @@
-
+passwd -  jest używane w systemach operacyjnych typu Unix/Linux do zmiany hasła użytkownika.
+man [polecenie] - służy do wyświetlania manuali (instrukcji) dla różnych poleceń i programów.
+who - pokazuje informacje na temat zalogowanych uzytkownikow na systemie
+whoami - pokazuje informacje na temat obecnie uzywanego konta
+ls - wyswietlanie zawartosci katalogu
+pwd - pokazuje sciezke do katalogu
+tree - pozwala na wyświetlenie struktury katalogów w formie drzewa.
+ls -l - wyświetla szczegółową listę zawartości katalogu w formie długiej
+ls / - wyświetla zawartość katalogu głównego (/) systemu plików Unix/Linux
+cd - przechodzi do folderu (zmiana katalogu)
+mkdir - tworzy folder
+rmdir - usuwa folder
+rm - usuwa plik
+exit - zamykanie terminala
