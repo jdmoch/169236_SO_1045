@@ -12,3 +12,14 @@ mkdir - tworzy folder
 rmdir - usuwa folder
 rm - usuwa plik
 exit - zamykanie terminala
+
+biezacy - pwd
+nadrzedny - ..
+glowny - /
+domowy - home albo ~
+
+d: Oznacza katalog (directory). Pliki, których nazwy zaczynają się od d, są katalogami
+c: Oznacza specjalne urządzenie znakowe (character special file). Jest to rodzaj pliku urządzenia, który reprezentuje urządzenie znakowe, takie jak terminale lub porty szeregowe.
+b: Oznacza specjalne urządzenie blokowe (block special file). Jest to rodzaj pliku urządzenia, który reprezentuje urządzenie blokowe, takie jak dyski twarde, pendrive'y czy inne nośniki danych.
+l: Oznacza dowiązanie symboliczne (symbolic link). Jest to specjalny rodzaj pliku, który zawiera odnośnik do innego pliku lub katalogu w systemie plików.
+-: Oznacza zwykły plik (regular file). Jest to standardowy typ pliku, który zawiera dane w formie tekstowej, binarnej lub innym formacie, zależnie od jego zawartości
