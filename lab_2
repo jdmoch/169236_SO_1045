@@ -1,1 +1,72 @@
+ZAD1
+st38@orfi:~$ mkdir st_2024
+st38@orfi:~$ cd st_2024
+st38@orfi:~/st_2024$ mkdir dane
+st38@orfi:~/st_2024$ mkdir teksty
+st38@orfi:~/st_2024$ mkdir programy
+st38@orfi:~/st_2024$ ls
+dane  programy  teksty
+st38@orfi:~/st_2024$ mkdir teksty listy
+mkdir: nie można utworzyć katalogu „teksty”: Plik istnieje
+st38@orfi:~/st_2024$ cd teksty
+st38@orfi:~/st_2024/teksty$ mkdir listy
+st38@orfi:~/st_2024/teksty$ mkdir podania
+st38@orfi:~/st_2024/teksty$ cd..
+-bash: cd..: nie znaleziono polecenia
+st38@orfi:~/st_2024/teksty$ cd ..
+st38@orfi:~/st_2024$ ls
+dane  listy  programy  teksty
+st38@orfi:~/st_2024$ cd..
+-bash: cd..: nie znaleziono polecenia
+st38@orfi:~/st_2024$ cd ..
+st38@orfi:~$ ls
+folderek  public_html  st_2024
+st38@orfi:~$ cd st_2024
+st38@orfi:~/st_2024$ ls
+dane  listy  programy  teksty
+st38@orfi:~/st_2024$ rmdir listy
+st38@orfi:~/st_2024$ ks
+-bash: ks: nie znaleziono polecenia
+st38@orfi:~/st_2024$ ls
+dane  programy  teksty
+st38@orfi:~/st_2024$ cd teksty
+st38@orfi:~/st_2024/teksty$ ls
+listy  podania
+st38@orfi:~/st_2024/teksty$ cd ..
+st38@orfi:~/st_2024$ ls
+dane  programy  teksty
+st38@orfi:~/st_2024$ cd programy
+st38@orfi:~/st_2024/programy$ mkdir c
+st38@orfi:~/st_2024/programy$ mkdir shell
+st38@orfi:~/st_2024/programy$ cd shell
+st38@orfi:~/st_2024/programy/shell$ mkdir skrypty
+st38@orfi:~/st_2024/programy/shell$ ls
+skrypty
+st38@orfi:~/st_2024/programy/shell$ tree
+.
+└── skrypty
+
+1 directory, 0 files
+st38@orfi:~/st_2024/programy/shell$ cd /
+st38@orfi:/$ ls
+bin   DANE  etc   initrd.img      lib    lib64   lost+found  mnt  proc  run   srv  tmp  var      vmlinuz.old
+boot  dev   home  initrd.img.old  lib32  libx32  media       opt  root  sbin  sys  usr  vmlinuz
+st38@orfi:/$ cd home
+st38@orfi:/home$ cd st38
+st38@orfi:~$ ls
+folderek  public_html  st_2024
+st38@orfi:~$ tree st_2024
+st_2024
+├── dane
+├── programy
+│   ├── c
+│   └── shell
+│       └── skrypty
+└── teksty
+    ├── listy
+    └── podania
+
+
+ZAD2 
+
 
