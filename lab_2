@@ -4,10 +4,6 @@ st38@orfi:~$ cd st_2024
 st38@orfi:~/st_2024$ mkdir dane
 st38@orfi:~/st_2024$ mkdir teksty
 st38@orfi:~/st_2024$ mkdir programy
-st38@orfi:~/st_2024$ ls
-dane  programy  teksty
-st38@orfi:~/st_2024$ mkdir teksty listy
-mkdir: nie można utworzyć katalogu „teksty”: Plik istnieje
 st38@orfi:~/st_2024$ cd teksty
 st38@orfi:~/st_2024/teksty$ mkdir listy
 st38@orfi:~/st_2024/teksty$ mkdir podania
@@ -40,17 +36,6 @@ st38@orfi:~/st_2024/programy$ mkdir c
 st38@orfi:~/st_2024/programy$ mkdir shell
 st38@orfi:~/st_2024/programy$ cd shell
 st38@orfi:~/st_2024/programy/shell$ mkdir skrypty
-st38@orfi:~/st_2024/programy/shell$ ls
-skrypty
-st38@orfi:~/st_2024/programy/shell$ tree
-.
-└── skrypty
-
-1 directory, 0 files
-st38@orfi:~/st_2024/programy/shell$ cd /
-st38@orfi:/$ ls
-bin   DANE  etc   initrd.img      lib    lib64   lost+found  mnt  proc  run   srv  tmp  var      vmlinuz.old
-boot  dev   home  initrd.img.old  lib32  libx32  media       opt  root  sbin  sys  usr  vmlinuz
 st38@orfi:/$ cd home
 st38@orfi:/home$ cd st38
 st38@orfi:~$ ls
@@ -66,7 +51,16 @@ st_2024
     ├── listy
     └── podania
 
-
 ZAD2 
+
+touch Zestawienie.txt 
+nano Zestawienie.txt  
+(wpisałem "169236, 15:57, 02.03.2024, zachmurzone niebo ) 
+a) cp Zestawienie.txt ~/st_2024/Programy/Shell/Skrypty/spis24.txt 
+b) less spis24.txt 
+
+
+
+
 
 
