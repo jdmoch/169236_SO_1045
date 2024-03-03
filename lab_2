@@ -46,8 +46,11 @@ ZAD2
 touch Zestawienie.txt 
 nano Zestawienie.txt  
 (169236, 15:57, 02.03.2024, zachmurzone niebo ) 
-a) cp Zestawienie.txt ~/st_2024/Programy/Shell/Skrypty/spis24.txt 
-b) less spis24.txt 
+a) cp st_2024/Dane/Teksty/Zestawienie.txt st_2024/Programy/Skrypty/spis24.txt
+
+Polecenie cp to ścieżka bezwzględna
+
+b) less st_2024/Programy/Skrypty/spis24.txt
 
 ZAD3
 
