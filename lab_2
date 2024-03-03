@@ -7,22 +7,12 @@ st38@orfi:~/st_2024$ mkdir programy
 st38@orfi:~/st_2024$ cd teksty
 st38@orfi:~/st_2024/teksty$ mkdir listy
 st38@orfi:~/st_2024/teksty$ mkdir podania
-st38@orfi:~/st_2024/teksty$ cd..
--bash: cd..: nie znaleziono polecenia
 st38@orfi:~/st_2024/teksty$ cd ..
 st38@orfi:~/st_2024$ ls
 dane  listy  programy  teksty
-st38@orfi:~/st_2024$ cd..
--bash: cd..: nie znaleziono polecenia
 st38@orfi:~/st_2024$ cd ..
-st38@orfi:~$ ls
-folderek  public_html  st_2024
 st38@orfi:~$ cd st_2024
-st38@orfi:~/st_2024$ ls
-dane  listy  programy  teksty
 st38@orfi:~/st_2024$ rmdir listy
-st38@orfi:~/st_2024$ ks
--bash: ks: nie znaleziono polecenia
 st38@orfi:~/st_2024$ ls
 dane  programy  teksty
 st38@orfi:~/st_2024$ cd teksty
@@ -55,9 +45,54 @@ ZAD2
 
 touch Zestawienie.txt 
 nano Zestawienie.txt  
-(wpisałem "169236, 15:57, 02.03.2024, zachmurzone niebo ) 
+(169236, 15:57, 02.03.2024, zachmurzone niebo ) 
 a) cp Zestawienie.txt ~/st_2024/Programy/Shell/Skrypty/spis24.txt 
 b) less spis24.txt 
+
+ZAD3
+
+pwd
+
+ZAD4
+
+ln -s ~/Podania ~/st_2024/Dane/Odsylacz_Dane
+
+ZAD5
+
+ln -s ~/Skrypty ~/st_2024/Dane/Podania/Skrypty_Odsylacz
+
+ZAD6
+
+ln -s ~/st_2024/Dane/Teksty/Zestawienie.txt ~/st_2024/Dane/Teksty/Listy/DoZestawienia
+
+ZAD7
+
+touch ListDoEwy.txt
+touch OlaChceKota.txt
+touch WielkieOczy.txt
+touch ToNieJestList
+touch list.txt
+
+ZAD8
+
+mv st_2024/Dane/Teksty/Listy/*.txt st_2024/Dane/Teksty/Podania/
+
+ZAD9
+
+brak tresci
+
+ZAD10
+
+rm -r st_2024/Programy
+
+ZAD11
+
+cp st_2024/Dane/Teksty/Podania/*list* st_2024/Dane/Teksty/Listy/
+
+ZAD12
+
+find st_2024/Dane/Teksty/Listy/ -type f -name "????.*" -delete
+
 
 
 
