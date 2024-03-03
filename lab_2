@@ -94,7 +94,7 @@ cp st_2024/Dane/Teksty/Podania/*list* st_2024/Dane/Teksty/Listy/
 
 ZAD12
 
-find st_2024/Dane/Teksty/Listy/ -type f -name "????.*" -delete
+find /st_2024/Dane/Teksty/Listy/ -type f -name "????.*" -delete
 
 
 
