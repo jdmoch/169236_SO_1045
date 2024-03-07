@@ -1,1 +1,12 @@
+ZAD1
+
+mkdir -p ~/Notatki ~/Przepisy ~/Dane/Kopie
+echo "Dzień tygodnia: $(date +%A)" > ~/Notatki/Zapiski.txt
+echo "Katalog /dev: $(ls -ld /dev)" >> ~/Notatki/Zapiski.txt
+
+ZAD2
+
+ln -s ~/Notatki/Zapiski.txt ~/Przepisy/AdZapisek
+
+ZAD3
 
