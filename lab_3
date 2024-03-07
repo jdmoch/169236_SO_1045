@@ -10,3 +10,100 @@ ln -s ~/Notatki/Zapiski.txt ~/Przepisy/AdZapisek
 
 ZAD3
 
+chmod 744 ~/Notatki
+chmod 764 ~/Notatki/Zapiski.txt
+chmod 741 ~/Notatki/Zapiski.txt
+
+ZAD4
+
+touch ~/Dane/Plik_testowy.txt
+
+chmod 644 ~/Dane/Plik_testowy.txt
+
+Odczyt informacji o pliku (ls)
+ls -l ~/Dane/Plik_testowy.txt
+
+Odczyt zawartości pliku (cat)
+cat ~/Dane/Plik_testowy.txt
+
+Zmiana praw dostępu - Nie
+chmod 755 ~/Dane/Plik_testowy.txt  - BLAD
+
+Kopiowanie - Tak
+cp ~/Dane/Plik_testowy.txt ~/Dane/Kopia_Pliku.txt
+
+Usuwanie - Tak
+rm ~/Dane/Plik_testowy.txt
+
+Przenoszenie (zmiana nazwy) - Tak
+mv ~/Dane/Kopia_Pliku.txt ~/Dane/Nowa_Nazwa.txt
+
+Modyfikacja zawartości - Tak
+echo "Nowa zawartość pliku." > ~/Dane/Nowa_Nazwa.txt
+
+Uruchamianie pliku specjalnego - Nie
+
+ZAD5
+
+chmod 755 ~/Dane
+touch Plik_testowy.txt
+mkdir Podkatalog
+cd ~/Dane
+
+Zmiana nazwy - Tak
+mv ~/Dane ~/NowaNazwa
+
+Ponowne utworzenie katalogu Dane
+mkdir -p ~/Dane
+chmod 755 ~/Dane
+
+Zmiana praw dostępu - Tak
+chmod 744 ~/Dane
+
+Odczyt danych o katalogu - Tak
+ls -l ~/Dane
+
+Odczyt - Tak
+ls -l ~/Dane
+
+Utworzenie podkatalogu - Tak
+mkdir ~/Dane/NowyPodkatalog
+
+Skopiowanie pliku do katalogu - Tak
+cp ~/Dane/Plik_testowy.txt ~/Dane/Kopia_Pliku.txt
+
+Usunięcie pliku z katalogu - Tak
+rm ~/Dane/Kopia_Pliku.txt
+
+Skopiowanie pliku z katalogu - Tak
+cp ~/Dane/Plik_testowy.txt ~/InnyKatalog
+
+ZAD6
+
+umask 0027
+
+ZAD7
+
+mkdir ~/Dane/Proba1
+touch ~/Dane/plik1.txt
+ls -l ~/Dane
+
+Zostaly nadane prawa 
+Dla gospodarza READ WRITE EXECUTE
+Dla grupy READ
+Dla innych EXECUTE
+
+ZAD8
+
+i-węzeł - jest strukturą danych w systemach plików,
+która przechowuje metadane pliku, takie jak uprawnienia, właściciel, grupa, rozmiar, daty modyfikacji 
+
+ZAD9
+
+ls -i ~/Notatki
+
+ZAD10
+
+Wykonać operację odczytu zawartości katalogu, aby uzyskać listę plików i katalogów w katalogu "Dane".
+Znaleźć plik "dane1" wśród innych plików i katalogów.
+Wykonać operację odczytu pliku "dane1", aby odczytać jego zawartość.
