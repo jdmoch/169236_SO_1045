@@ -107,3 +107,5 @@ ZAD10
 Wykonać operację odczytu zawartości katalogu, aby uzyskać listę plików i katalogów w katalogu "Dane".
 Znaleźć plik "dane1" wśród innych plików i katalogów.
 Wykonać operację odczytu pliku "dane1", aby odczytać jego zawartość.
+
+---------------------------------------OPERACJE NA PLIKU
