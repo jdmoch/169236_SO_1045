@@ -114,5 +114,26 @@ cat dane.txt
 
 ZAD2
 
+lseek(plik1, 0L, 2);
+ilosc = write(plik1, "To zapis o psie Ali\n", 20);
+printf("Zapisano %d znakow na koniec pliku\n", ilosc);
+
+
+Otwarcie O_RDWR
+plik1 = open("dane.txt", O_RDWR, 0);
+
+ZAD3
+
+plik1 = open("dane.txt", O_RDWR, 0);
+write(plik1, "NOWA TREŚĆ", 11);
+
+Wcześniejsza zawartość pliku zostanie nadpisana przez nowy tekst
+
+ZAD4
+
+write(plik1, "DRUGI", 5);
+drugi nadpisuje nowa tresc
+
+
 
 
