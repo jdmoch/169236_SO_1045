@@ -104,8 +104,7 @@ ls -i ~/Notatki
 
 ZAD10
 
-Wykonać operację odczytu zawartości katalogu, aby uzyskać listę plików i katalogów w katalogu "Dane".
-Znaleźć plik "dane1" wśród innych plików i katalogów.
-Wykonać operację odczytu pliku "dane1", aby odczytać jego zawartość.
+System operacyjny musi przeszukać ścieżkę od katalogu nadrzędnego do katalogu "Dane", a następnie użyć informacji zawartych w i-węźle pliku "dane1", aby odczytać jego zawartość.
+
 
 ---------------------------------------OPERACJE NA PLIKU
