@@ -1,1 +1,23 @@
+ZAD1
+a)
+echo "Informacje o pogodzie: Słonecznie" > dane22 && ls -l >> dane22
+pwd >> dane22
+
+b)
+tree ~ > drzewo
+cat dane22 drzewo > wynik
+
+C)
+cat dane22 drzewo wynik > wszystko
+
+d)
+who | cut -d' ' -f1 | sort | uniq | wc -l
+
+e)
+find . -type f -o -type d | wc -l
+
+ZAD2
+find /
+
+
 
