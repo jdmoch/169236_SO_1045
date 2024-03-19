@@ -17,7 +17,38 @@ e)
 find . -type f -o -type d | wc -l
 
 ZAD2
-find /
+a)
+find /a.find ~ -maxdepth 1 -type f -empty
 
+b)
+find /dev -type c | wc -l
+
+c)
+find ~ -type d -maxdepth 1 -perm /u=x
+
+d)
+find . -maxdepth 1 -type f \( -name '[a-f]*' -o -name "w*" \) -exec cat {} \;
+
+e)
+find ~ -maxdepth 3 -type f -mmin -30 -not -empty
+
+f)
+>find . -type f -amin -30
+>find . -type f -mmin -30
+>find . -type f -cmin -30
+
+ZAD3
+a)
+als -l /dev | grep -c '^b'
+4 urzadzenia
+
+b)
+find . -maxdepth 1 -type f \( -name "[a-f]*" -o -name "w*" \) -exec cat {} +
+
+c)
+find . -mindepth 2 -maxdepth 3 -type d
+find . -mindepth 2 -maxdepth 3 -type d | wc -l
+
+PLIK2
 
 
