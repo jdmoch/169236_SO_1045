@@ -50,5 +50,15 @@ find . -mindepth 2 -maxdepth 3 -type d
 find . -mindepth 2 -maxdepth 3 -type d | wc -l
 
 PLIK2
+1.
+klawisz F7, aby utworzyć nowy katalog DANE22
 
+2.
+Insert lub spacja, F5 potem przechodzimy do dane22 i wklejamy F5
+
+3.
+alt + i
+
+4.
+zaznaczamy, klikamy F8 i zatwierdzamy enterem
 
