@@ -1,1 +1,9 @@
+ZAD1
+echo $HOME - opisuje sciezke z obecnego folderu do folderu domowego
+echo $_ - to samo
+
+ZAD3
+a. grep "ala" tekst21_03.txt
+b. grep "tola i ala" tekst21_03.txt
+c.
 
