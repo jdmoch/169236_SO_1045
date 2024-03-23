@@ -3,7 +3,19 @@ echo $HOME - opisuje sciezke z obecnego folderu do folderu domowego
 echo $_ - to samo
 
 ZAD3
-a. grep "ala" tekst21_03.txt
-b. grep "tola i ala" tekst21_03.txt
-c.
+a. grep '^ala' tekst21_03.txt
+b. grep 'tola i ala$' tekst21_03.txt
+c. grep -E 'ala|aallaa|allo|alo' tekst21_03.txt
+d. grep -E '\wl\w|\wll\w|\wlll\w' tekst21_03.txt
+e. grep -c '^[[:space:]]*alla\|^[[:space:]]*ala' tekst21_03.txt
+f. grep 'o,' tekst21_03.txt
+g. grep '\\' tekst21_03.txt
+h. grep '4' tekst21_03.txt | grep -v '*'
 
+ZAD4
+nn1=10
+nn2=5
+nn1=$((nn1+nn2))
+unset nn2
+
+ZAD5
