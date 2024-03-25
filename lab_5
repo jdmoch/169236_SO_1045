@@ -19,3 +19,11 @@ nn1=$((nn1+nn2))
 unset nn2
 
 ZAD5
+nano ~/.bashrc
+
+if [[ ":PATH:" != *":$(pwd):"* ]]; then
+        export PATH="$PATH:$(pwd)"
+fi
+
+source ~/.bashrc
+
