@@ -25,5 +25,14 @@ if [[ ":PATH:" != *":$(pwd):"* ]]; then
         export PATH="$PATH:$(pwd)"
 fi
 
-source ~/.bashrc
+ZAD6
+OLD_PS1="$PS1"
+export PS1="\d \u$"
+
+ZAD7
+a.export PS1="\u \t \! $ "
+b.export PS1="\w \! $ "
+
+ZAD8
+export PS1="$old_PS1"
 
