@@ -3,36 +3,41 @@ echo $HOME - opisuje sciezke z obecnego folderu do folderu domowego
 echo $_ - to samo
 
 ZAD3
-a. grep '^ala' tekst21_03.txt
-b. grep 'tola i ala$' tekst21_03.txt
-c. grep -E 'ala|aallaa|allo|alo' tekst21_03.txt
-d. grep -E '\wl\w|\wll\w|\wlll\w' tekst21_03.txt
-e. grep -c '^[[:space:]]*alla\|^[[:space:]]*ala' tekst21_03.txt
-f. grep 'o,' tekst21_03.txt
-g. grep '\\' tekst21_03.txt
-h. grep '4' tekst21_03.txt | grep -v '*'
+a. grep '^ala' tekst21_03.txt „ala” - na początku wiersza
+b. grep 'tola i ala$' tekst21_03.txt - „tola i ala” – na końcu wiersza
+c. grep -E 'ala|aallaa|allo|alo' tekst21_03.txt - typu „ala” (może być „ala”, „aallaa”, „allo”, „alo”
+d. grep -E '\wl\w|\wll\w|\wlll\w' tekst21_03.txt - typu „<znak>l<znak>” lub „<znak>ll<znak>” lub „<znak>lll<znak>”
+e. grep -c '^[[:space:]]*alla\|^[[:space:]]*ala' tekst21_03.txt - ile wierszy zaczyna się od „ala” lub „alla” (mogą być wcześniej spacje)
+f. grep 'o,' tekst21_03.txt -  wiersze z przecinkiem po literze „o”
+g. grep '\\' tekst21_03.txt -  wiersze ze znakiem ”\”
+h. grep '4' tekst21_03.txt | grep -v '*' -  wiersze zawierające „4” i nie zawierające po 4 znaku „*”
 
-ZAD4
+ZAD4 - Utworzyć zmienne powłoki: nn1 z wartością 10, nn2 równe 5, dodaj nn1 do nn2, wynik zapisz do nn1, 
+zmienną nn2 usuń. 
 nn1=10
 nn2=5
 nn1=$((nn1+nn2))
 unset nn2
 
-ZAD5
+ZAD5 Sprawdzić czy zmienna PATH zawiera katalog bieżący, jeżeli nie – dopisać go do jej zawartości w kontekście 
+bieżącego logowania
+
 nano ~/.bashrc
 
 if [[ ":PATH:" != *":$(pwd):"* ]]; then
         export PATH="$PATH:$(pwd)"
 fi
 
-ZAD6
+ZAD6 W kontekście bieżącego logowania – do znaku zachęty dołożyć bieżącą datę i nazwę powłoki (uwaga –
+najpierw proszę zapamiętać obecną wartość zmiennej PS1).
+
 OLD_PS1="$PS1"
 export PS1="\d \u$"
 
 ZAD7
-a.export PS1="\u \t \! $ "
-b.export PS1="\w \! $ "
+a.export PS1="\u \t \! $ " - nazwę powłoki, czas, numer aktualnego polecenia
+b.export PS1="\w \! $ " -  nazwę bieżącego katalogu, numer aktualnego polecenia
 
 ZAD8
-export PS1="$OLD_PS1"
+export PS1="$OLD_PS1" - przywrocenie
 
