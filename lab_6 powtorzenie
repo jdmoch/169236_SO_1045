@@ -1,0 +1,10 @@
+> przemieszczanie sie miedzy katalogami - cd, ls, ls -l, ls - al, ls -a, tree
+> tworzenie/usuwanie plikow i katalogow - mkdir, touch, mkdir -m 777 nowyKat1 -> katalog z uprawnieniami, nano, echo "costam" > plik, rm, touch, rm -v plik, less log.txt, rmdir, rm -rf
+> ls -l | wc -l -> zlicza linie, jak policzyc słowa -> ls -l | wc -w, ls -l | wc -> wyswietla wszystko mianowicie bajty slowa linie, polaczenie dwoch plikow tekstowych -> cat a2 >> a1, cp co gdzie -> kopiowanie
+> mv -> przenoszenie lub zmiana nazwy :oo, mv lista.txt 1folder, mv lista.txt folder/nazwa
+> nadawanie uprawnien do plikow i katalogow -> chmod 742 --> tabelka rwx, ls -l l,ln -s -> dowiazanie symboliczne, ln -s ~ dom, ls -l, 
+> pwd to to samo co . -> jak wpisujemy dowiazanie czy cos w pliku
+> find -> szukaj , grep, /// do uzupelnienia
+> find -max depth - maksymalna glebokosc przeszukiwania 
+> grep -> szuka zawartosci pliku. grep zip *.txt, grep '[0-9]$' *.txt | less, grep '^\s ala' zad5
+i lab6 
