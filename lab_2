@@ -50,14 +50,15 @@ a) cp st_2024/Dane/Teksty/Zestawienie.txt st_2024/Programy/Skrypty/spis24.txt
 
 Polecenie cp to ścieżka bezwzględna
 
-b) less st_2024/Programy/Skrypty/spis24.txt
+b) wyswietlanei zawartosci pliku - less st_2024/Programy/Skrypty/spis24.txt
 
 ZAD3
+Nazwa biezacego katalogu
 
 pwd
 
 ZAD4
-
+Dowiązanie symboliczne z katalogu podania do katalogu dane z nazwa odsylacz_dane
 ln -s ~/Podania ~/st_2024/Dane/Odsylacz_Dane
 
 ZAD5
@@ -65,6 +66,7 @@ ZAD5
 ln -s ~/Skrypty ~/st_2024/Dane/Podania/Skrypty_Odsylacz
 
 ZAD6
+Dowiązanei symboliczne z katalogu listy do pliku zestaweinei.txt z nazwa DoZestawienia
 
 ln -s ~/st_2024/Dane/Teksty/Zestawienie.txt ~/st_2024/Dane/Teksty/Listy/DoZestawienia
 
@@ -77,6 +79,7 @@ touch ToNieJestList
 touch list.txt
 
 ZAD8
+Przenoszenie wszystkich plikow
 
 mv st_2024/Dane/Teksty/Listy/*.txt st_2024/Dane/Teksty/Podania/
 
@@ -85,15 +88,15 @@ ZAD9
 brak tresci
 
 ZAD10
-
+Usuwanie katalogu z pod katalogami
 rm -r st_2024/Programy
 
 ZAD11
-
+Kopiowanie wszytkich plikow ktore zawieraja slowo list do folderu listy
 cp st_2024/Dane/Teksty/Podania/*list* st_2024/Dane/Teksty/Listy/
 
 ZAD12
-
+usun wszystkie pliki tekstowe ktorych nazwa ma dokladnie 4 znaki
 find /st_2024/Dane/Teksty/Listy/ -type f -name "????.*" -delete
 
 
