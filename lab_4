@@ -21,19 +21,23 @@ e) ile plikow i podkatalogow jest w danym katalogu
 find . -type f -o -type d | wc -l
 
 ZAD2
-a)
+a) wszystkie puste pliki zwykłe w katalogu domowym i jego podkatalogach do poziomu 1;
 find /a.find ~ -maxdepth 1 -type f -empty
 
-b)
+b) znaleźć w katalogu /dev wszystkie pliki opisujące pseudourządzenia znakowe, policzyć –
+ile ich jest;
 find /dev -type c | wc -l
 
-c)
+c)wyszukać wszystkie podkatalogi w katalogu domowym z prawami dostępu r-x dla 
+właściciela;
 find ~ -type d -maxdepth 1 -perm /u=x
 
-d)
+d)wyszukać wszystkie pliki zwykłe katalogu bieżącym o nazwach zaczynających się na 
+jedną z liter a-f, w i podać polecenie wyświetlenia ich zawartości;
 find . -maxdepth 1 -type f \( -name '[a-f]*' -o -name "w*" \) -exec cat {} \;
 
-e)
+e)wyszukać w podkatalogach do poziomu 3 w katalogu domowym pliki niepuste, 
+utworzone lub modyfikowane, nie wcześniej niż 30 minut temu
 find ~ -maxdepth 3 -type f -mmin -30 -not -empty
 
 f)
@@ -42,14 +46,14 @@ f)
 >find . -type f -cmin -30
 
 ZAD3
-a)
+a) policz, ile urządzeń blokowych jest zdefiniowanych w katalogu /dev;
 als -l /dev | grep -c '^b'
 4 urzadzenia
 
-b)
+b)policz, ile wierszy razem zawierają pliki o nazwach zaczynających się na jedną z liter a, c-e, w;
 find . -maxdepth 1 -type f \( -name "[a-f]*" -o -name "w*" \) -exec cat {} +
 
-c)
+c) wyszukaj nazwy wszystkich podkatalogów od poziomu 2 do 3 w katalogu głównym i  policz, ile ich jest
 find . -mindepth 2 -maxdepth 3 -type d
 find . -mindepth 2 -maxdepth 3 -type d | wc -l
 
