@@ -1,3 +1,37 @@
+ZAD1.
+Utwórz dwie zmienne i przypisz do nich liczby, sprawdź która z nich jest mniejsza:
+liczba1=5
+liczba2=10
+if [ $liczba1 -lt $liczba2 ]; then
+    echo "Liczba 1 jest mniejsza od liczby 2."
+else
+    echo "Liczba 2 jest mniejsza od liczby 1."
+fi
+
+ZAD2.
+if [ -f ~/dane.txt ]; then
+    echo "Plik 'dane.txt' istnieje w katalogu domowym."
+else
+    echo "Plik 'dane.txt' nie istnieje w katalogu domowym."
+fi
+
+ZAD3.
+zmienna="przykładowy tekst"
+if [ -n "$zmienna" ]; then
+    echo "Zmienna zawiera łańcuch niezerowy."
+else
+    echo "Zmienna jest pusta."
+fi
+
+ZAD4.
+if [ "$PWD" = "$HOME" ]; then
+    echo "Aktualny katalog jest katalogiem domowym."
+else
+    echo "Aktualny katalog nie jest katalogiem domowym."
+fi
+
+
+
 > przemieszczanie sie miedzy katalogami - cd, ls, ls -l, ls - al, ls -a, tree
 > tworzenie/usuwanie plikow i katalogow - mkdir, touch, mkdir -m 777 nowyKat1 -> katalog z uprawnieniami, nano, echo "costam" > plik, rm, touch, rm -v plik, less log.txt, rmdir, rm -rf
 > ls -l | wc -l -> zlicza linie, jak policzyc słowa -> ls -l | wc -w, ls -l | wc -> wyswietla wszystko mianowicie bajty slowa linie, polaczenie dwoch plikow tekstowych -> cat a2 >> a1, cp co gdzie -> kopiowanie
@@ -7,4 +41,4 @@
 > find -> szukaj , grep, /// do uzupelnienia
 > find -max depth - maksymalna glebokosc przeszukiwania 
 > grep -> szuka zawartosci pliku. grep zip *.txt, grep '[0-9]$' *.txt | less, grep '^\s ala' zad5
-> lab6
+
