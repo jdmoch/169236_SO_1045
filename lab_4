@@ -2,21 +2,22 @@
 ">>" - do juz instniejacego pliku
 
 ZAD1
-a)
+a) do pliku dane22 zapisac informacje i dopisac wynik polecenia ls -l i dopisac nazwe biezacego katalogu
+
 echo "Informacje o pogodzie: Słonecznie" > dane22 && ls -l >> dane22
 pwd >> dane22
 
-b)
+b) do pliku zapisac strukture katalogu domowego i drzewo zapisac do pliku wynik
 tree ~ > drzewo
 cat dane22 drzewo > wynik
 
-C)
+C) zawartosc wszysrtko do jednego pliku
 cat dane22 drzewo wynik > wszystko
 
-d)
+d) ilu uzytkownikow pracuje na serwerze
 who | cut -d' ' -f1 | sort | uniq | wc -l
 
-e)
+e) ile plikow i podkatalogow jest w danym katalogu
 find . -type f -o -type d | wc -l
 
 ZAD2
