@@ -1,10 +1,12 @@
 ZAD1
+podkatalogi notatki przepisy dane wp odkatalogu notatki utworzyc plik zapiski.txt(wypiusuje informacje o dniu tygonia i o katalogu/dev) i podkatalog kopie
 
 mkdir -p ~/Notatki ~/Przepisy ~/Dane/Kopie
 echo "Dzień tygodnia: $(date +%A)" > ~/Notatki/Zapiski.txt
 echo "Katalog /dev: $(ls -ld /dev)" >> ~/Notatki/Zapiski.txt
 
 ZAD2
+Dowiazanei symboliczne o nazwie Adzapisek w podkatalogu przepiusy do pliku zapiski.txt
 
 ln -s ~/Notatki/Zapiski.txt ~/Przepisy/AdZapisek
 
@@ -79,7 +81,7 @@ Skopiowanie pliku z katalogu - Tak
 cp ~/Dane/Plik_testowy.txt ~/InnyKatalog
 
 ZAD6
-
+Zmiana maski
 umask 0027
 
 ZAD7
@@ -99,7 +101,7 @@ i-węzeł - jest strukturą danych w systemach plików,
 która przechowuje metadane pliku, takie jak uprawnienia, właściciel, grupa, rozmiar, daty modyfikacji 
 
 ZAD9
-
+Ustalic numery i- wezlow zasobów katalogu notatki
 ls -i ~/Notatki
 
 ZAD10
