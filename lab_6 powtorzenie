@@ -7,4 +7,4 @@
 > find -> szukaj , grep, /// do uzupelnienia
 > find -max depth - maksymalna glebokosc przeszukiwania 
 > grep -> szuka zawartosci pliku. grep zip *.txt, grep '[0-9]$' *.txt | less, grep '^\s ala' zad5
-i lab6 
+> lab6
