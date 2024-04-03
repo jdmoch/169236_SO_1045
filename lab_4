@@ -1,3 +1,6 @@
+">" - do pliku
+">>" - do juz instniejacego pliku
+
 ZAD1
 a)
 echo "Informacje o pogodzie: Słonecznie" > dane22 && ls -l >> dane22
