@@ -1,1 +1,42 @@
+ZAD.1
+cat /etc/passwd | cut -d”:” -f1,3,6 - wyswietla zawartosc pliku /etc/passwd, wybiera określone pola z każdej linii pliku. Opcja -d":" określa, że separator pól to dwukropek, a -f1,3,6 wybiera pierwsze, trzecie i szóste pole.
+cat /etc/passwd | tr -s ":" | cut -d":" -f1,3,5 - wyswietla zawartosc pliku /etc/passwd , powtarzajace znaki dwukropka przeksztalca na jeden dwukropek i wybiera okreslone pola.
+cat /etc/passwd | tr -s ":" | cut -d":" -f1,3,5 | tr ":" " " - ponownie, wyświetla zawartość pliku /etc/passwd. tr -s ":" - usuwa powtarzające się znaki dwukropka.cut -d":" -f1,3,5 - wybiera określone pola. tr ":" " " - zamienia znaki dwukropka na spacje.
 
+ZAD.2
+ls -l | awk '{print $2, $3 ,$4 ,$5 , $7, $8}'
+
+ZAD.3
+
+1.
+2.a="/home/jan23/Pliki/projekt1/Pliki/Dane"
+3.echo $a
+4.
+echo ${#a}:
+Wyświetla długość zawartości zmiennej a.
+
+echo ${zmienna%Pliki*}:
+Usuwa najkrótszy dopasowany sufiks Pliki* (zaczynając od końca) ze zmiennej zmienna.
+
+echo ${zmienna%%Pliki*}:
+Usuwa najdłuższy dopasowany sufiks Pliki* (zaczynając od końca) ze zmiennej zmienna.
+
+echo ${zmienna#*Pliki}:
+Usuwa najkrótszy dopasowany prefiks *Pliki (zaczynając od początku) ze zmiennej zmienna.
+
+echo ${zmienna##*Pliki}:
+Usuwa najdłuższy dopasowany prefiks *Pliki (zaczynając od początku) ze zmiennej zmienna.
+
+ZAD.4
+Definicja funkcji fun1:
+Wyświetla "działa fun1".
+Przypisuje wartość 555 do zmiennej d22.
+Wyświetla wartość zmiennej d22.
+Wyświetla wartość zmiennej k1.
+
+Wyświetlenie "Skrypt główny".
+Przypisanie wartości 33 do zmiennej k1.
+Wyświetlenie wartości zmiennej k1.
+Wywołanie funkcji fun1, co spowoduje wykonanie jej kodu.
+Po zakończeniu funkcji, próbuje wyświetlić wartość zmiennej d22. Jednak zmienna d22 jest zdefiniowana tylko wewnątrz funkcji fun1, więc na zewnątrz funkcji nie jest dostępna. W związku z tym ta linijka wyświetli pustą wartość.
+Zakończenie skryptu.
