@@ -1,1 +1,11 @@
+ZAD1
 
+if [[ "$*" == *las* ]]; then
+    echo "Znaleziono wartość 'las' w podanych argumentach."
+fi
+
+if [[ "$*" == *a1* ]]; then
+    # Liczba zwykłych plików w katalogu domowym
+    files_count=$(find ~ -maxdepth 1 -type f | wc -l)
+    echo "Liczba zwykłych plików w katalogu domowym: $files_count"
+fi
