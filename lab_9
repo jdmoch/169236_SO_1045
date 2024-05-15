@@ -1,1 +1,68 @@
+ZAD1
 
+1.
+s169236@orfi:~$ ps aux | wc -l
+149
+2.
+s169236@orfi:~$ ps -u root -f
+3.
+s169236@orfi:~$ ps -ejH
+s169236@orfi:~$ ps axjf
+4.
+s169236@orfi:~$ ps -p $$ -o pri
+PRI
+ 19
+
+ZAD2
+1.
+s169236@orfi:~$ top
+najwiecej zuzywa sshd
+2.
+najwiecej ramu zuzywa mysqld
+3.
+s169236@orfi:~$ ps -eo pid,ppid,pri,cmd | grep '[t]op'
+1697588 1697242  19 top
+
+ZADANIA DODATKOWE 1
+1.
+s169236@orfi:~$ uname -r
+5.10.0-11-amd64
+2.
+s169236@orfi:~$ free -h
+3.
+s169236@orfi:~$ lscpu
+Common KVM processor
+2 rdzenie
+4.
+s169236@orfi:~$ free -h
+wymiana 974 Mi
+3,8 Gi pamieci
+5.
+s169236@orfi:~$ ls /dev
+6.
+s169236@orfi:~$ free -h
+7.
+s169236@orfi:~$ pwdx "$(pgrep bash)"
+8.
+s169236@orfi:~$ which bash
+/usr/bin/bash
+9.
+10.
+lsof -p $(pgrep bash)
+
+ZADANIA DODATKOWE 2
+1.
+Minimalny zestaw stanów procesu:
+>3 (TASK_INTERRUPTIBLE) - proces jest uspiony i moze zostac obudzony przez sygnal
+>2 (TASK_RUNNING) - proces jest gotowy do działania
+>1 (TASK_INTERRUPTIBLE) - proces jest uspiony i moze zostac obudzony przez sygnal
+2.
+Proces uspiony oznacza ze proces zostal zawieszony na oczekiwanie na operacje wejscia-wyjscia ktora nie moze byc obsluzona bezposrednio przez procesor i musi zostac obsluzona przez inne urzadzenie
+pamiec oznacza pamiec operacyjna ram
+3. 
+"TASK_RUNNING"(2) jest pierwszym stanem
+"TASK_DEAD"(64) jest ostatnim stanem
+4.
+system operacyjny usuwa proces z obecnie wykonywanego przez niego stanu w celu wykonania innego procesu
+5.
+przechodzi w stan uspenia gdy oczekuje na jakies zdarzenie ktore nie moze zostac natychmiast obsluzone przez procesor 
