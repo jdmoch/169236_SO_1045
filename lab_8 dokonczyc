@@ -1,11 +1,201 @@
 ZAD1
 
-if [[ "$*" == *las* ]]; then
-    echo "Znaleziono wartość 'las' w podanych argumentach."
+#!/bin/bash
+
+# Sprawdzenie czy wśród wczytanych parametrów jest wartość "las"
+if [[ "$@" =~ "las" ]]; then
+    echo "Znaleziono wartość 'las' wśród podanych parametrów."
+else
+    echo "Nie znaleziono wartości 'las' wśród podanych parametrów."
 fi
 
-if [[ "$*" == *a1* ]]; then
-    # Liczba zwykłych plików w katalogu domowym
-    files_count=$(find ~ -maxdepth 1 -type f | wc -l)
-    echo "Liczba zwykłych plików w katalogu domowym: $files_count"
+# Sprawdzenie czy wśród parametrów jest wartość "a1"
+if [[ "$@" =~ "a1" ]]; then
+    echo "Znaleziono wartość 'a1' wśród podanych parametrów."
+    echo "Liczba zwykłych plików w katalogu domowym: $(find ~ -type f | wc -l)"
+else
+    echo "Nie znaleziono wartości 'a1' wśród podanych parametrów."
+fi
+
+ZAD2
+
+#!/bin/bash
+
+# Sprawdzenie ilości parametrów
+if [ "$#" -lt 3 ]; then
+    echo "Za mało parametrów."
+    exit 11
+elif [ "$#" -eq 3 ]; then
+    # Utworzenie pliku o nazwie podanej jako drugi parametr
+    touch "$2"
+    # Zapisanie zawartości katalogu domowego do utworzonego pliku
+    ls -R "$HOME" > "$2"
+    echo "Zakończono z kodem 55."
+    exit 55
+else
+    # Podliczenie ilości podkatalogów do 3 poziomu zagłębienia w katalogu bieżącym
+    subdirectories=$(find . -maxdepth 3 -type d | wc -l)
+    echo "Ilość podkatalogów do 3 poziomu zagłębienia: $subdirectories"
+    exit 22
+fi
+
+ZAD3
+
+#!/bin/bash
+
+# Sprawdzenie czy podano nazwę pliku jako argument
+if [ "$#" -ne 1 ]; then
+    echo "Użycie: $0 nazwa_pliku"
+    exit 1
+fi
+
+# Wczytanie nazwy pliku z argumentu
+filename="$1"
+
+# Sprawdzenie czy podany plik istnieje w katalogu bieżącym
+if [ ! -e "$filename" ]; then
+    echo "Plik '$filename' nie istnieje w katalogu bieżącym."
+    exit 1
+fi
+
+# Wyświetlenie nazw plików o rozmiarze większym od 150B
+echo "Pliki o rozmiarze większym od 150B w katalogu bieżącym:"
+find . -maxdepth 1 -type f -size +150c -exec basename {} \;
+
+ZAD4
+
+#!/bin/bash
+
+# Sprawdzenie czy podano przynajmniej dwa parametry
+if [ "$#" -lt 2 ]; then
+    echo "Za mało parametrów. Użycie: $0 parametr1 parametr2 [parametr3...]"
+    exit 1
+fi
+
+# Pierwszy parametr
+first_param="$1"
+
+# Usunięcie pierwszego parametru z listy
+shift
+
+# Licznik powtórzeń
+count=0
+
+# Przechodzimy przez pozostałe parametry
+for param in "$@"; do
+    # Jeśli parametr jest równy pierwszemu parametrowi, zwiększamy licznik
+    if [ "$param" = "$first_param" ]; then
+        ((count++))
+    fi
+done
+
+# Wyświetlenie wyniku
+echo "Wartość '$first_param' powtarza się $count razy."
+
+ZAD5
+
+#!/bin/bash
+
+# Pobranie nazwy skryptu
+script_name=$(basename "$0")
+
+# Wczytanie wyrazu od użytkownika
+echo "Podaj wyraz:"
+read word
+
+# Sprawdzenie czy wczytany wyraz jest równy nazwie skryptu
+if [ "$word" = "$script_name" ]; then
+    echo "Wczytany wyraz jest równy nazwie uruchomionego skryptu."
+else
+    echo "Wczytany wyraz nie jest równy nazwie uruchomionego skryptu."
+fi
+
+ZAD6
+
+#!/bin/bash
+
+# Sprawdzenie liczby parametrów
+if [ "$#" -gt 3 ]; then
+    echo "Ilość parametrów: $#"
+    echo "Pierwszy parametr: $1"
+    echo "Trzeci parametr: $3"
+    
+    # Sprawdzenie czy pierwszy i trzeci parametr są sobie równe
+    if [ "$1" = "$3" ]; then
+        echo "Pierwszy i trzeci parametr są sobie równe."
+    else
+        echo "Pierwszy i trzeci parametr nie są sobie równe."
+    fi
+elif [ "$#" -le 3 ]; then
+    echo "Ilość parametrów: $#"
+    echo "Parametry są nie więcej niż 3."
+    exit 17
+fi
+
+ZAD7
+
+#!/bin/bash
+
+# Sprawdzenie ilości parametrów
+if [ "$#" -gt 4 ]; then
+    echo "Ilość parametrów jest większa od 4. Zakończono działanie."
+    exit 25
+elif [ "$#" -eq 1 ]; then
+    if [ "$1" = "drzewo" ]; then
+        echo "Struktura katalogu bieżącego w postaci drzewa:"
+        tree
+    elif [ "$1" = "zwykle" ]; then
+        echo "Pliki zwykłe w katalogu bieżącym:"
+        ls -p | grep -v /
+    else
+        echo "Nieznany parametr. Zakończono działanie."
+        exit 123
+    fi
+else
+    echo "Numer procesu skryptu: $$"
+    exit 123
+fi
+
+ZAD8
+
+#!/bin/bash
+
+# Wyświetlenie nazwy katalogu domowego użytkownika
+echo "Katalog domowy użytkownika: $HOME"
+
+# Podanie liczby aktualnie zalogowanych użytkowników
+logged_in_users=$(who | wc -l)
+echo "Liczba użytkowników zalogowanych w tej chwili: $logged_in_users"
+
+ZAD9 i 10
+
+#!/bin/bash
+
+# Sprawdzenie ilości parametrów
+if [ "$#" -eq 0 ]; then
+    echo "Brak parametrów. Podaj co najmniej jeden parametr."
+    exit 1
+fi
+
+# Sprawdzenie pierwszego parametru
+if [ "$1" = "dwa" ]; then
+    # Wyświetlenie dzisiejszej daty
+    echo "Dzisiejsza data: $(date +%Y-%m-%d)"
+elif [ "$#" -eq 2 ]; then
+    # Sprawdzenie czy istnieje plik o nazwie podanej jako drugi parametr
+    if [ -f "$2" ]; then
+        echo "Plik '$2' istnieje w bieżącym katalogu."
+    else
+        echo "Plik '$2' nie istnieje w bieżącym katalogu."
+    fi
+elif [ "$#" -eq 3 ] && [ "$2" = "tworz" ]; then
+    # Wczytanie nazwy pliku
+    file_name="$3"
+    # Dopisanie PID do pliku
+    echo "Dopisywanie PID do pliku '$file_name'"
+    echo "$$" >> "$file_name"
+    echo "PID ($$) został dopisany do pliku '$file_name'."
+else
+    echo "Nieprawidłowe użycie skryptu."
+    exit 1
 fi
